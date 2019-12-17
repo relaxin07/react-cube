@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Item = ({ onItemMouseOver }) => {
+const Item = ({size}) => {
     return (
-        <div className="cube__item" onMouseOver={onItemMouseOver}></div>
+        <div className="cube__item" style={{height: size , width: size} } ></div>
     )
 }
 

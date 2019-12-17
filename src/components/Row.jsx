@@ -1,17 +1,18 @@
 import React from 'react';
 import Item from './Item';
 
-const Row = ({  columns, onItemMouseOver }) => {
+const Row = ({columns , size}) => {
     const renderItem = columns => {
         const result = [];
         for (let j = 0; j < columns; j++) {
-            result.push(<Item  key={j} onItemMouseOver={onItemMouseOver}  />)
+            result.push(<Item key={j} size={size}/>)
         }
         return result;
     }
-
     return (
-        <div className="cube__row" > {renderItem(columns)}</div>
+        <>
+            <div className="cube__row"> {renderItem(columns)}</div>
+        </>
     )
 }
 
